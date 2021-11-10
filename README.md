@@ -11,8 +11,11 @@ One of the tests has been isolated due to it's potentially long runtime.
 # Requirements
 All() should return an enumerable containing all digits from 1 to int.MaxValue
 
-Odds() should return an enumerable containing all odd digits from 1 to int.MaxValue
+Filter() should return an enumerable containing all items that match the predicate
 
-Evens() should return an enumerable containing all even digits from 2 to int.MaxValue
+Odds() should return an enumerable containing all odd digits from 1 to int.MaxValue, this must use the Filter function above
 
-No use of Enumerable.Range allowed
+Evens() should return an enumerable containing all even digits from 2 to int.MaxValue, this must use the Filter function above
+
+# Restrictions
+No use of Enumerable.Range or .Where allowed

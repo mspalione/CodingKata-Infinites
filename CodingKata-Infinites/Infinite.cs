@@ -10,6 +10,11 @@ namespace CodingKata_Infinites
             throw new NotImplementedException();
         }
 
+        public static IEnumerable<T> Filter<T>(IEnumerable<T> list, Func<T, bool> predicateFunc)
+        {
+            throw new NotImplementedException();
+        }
+
         public static IEnumerable<int> Odds()
         {
             throw new NotImplementedException();
