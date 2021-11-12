@@ -7,22 +7,29 @@ namespace CodingKata_Infinites
     {
         public static IEnumerable<int> All()
         {
-            throw new NotImplementedException();
+            var i = 1;
+
+            while (i > 0)
+                yield return i++;
         }
 
         public static IEnumerable<T> Filter<T>(IEnumerable<T> list, Func<T, bool> predicateFunc)
         {
-            throw new NotImplementedException();
+            foreach (T item in list)
+            {
+                if (predicateFunc(item))
+                    yield return item;
+            }
         }
 
         public static IEnumerable<int> Odds()
         {
-            throw new NotImplementedException();
+            return Filter(All(), n => n % 2 != 0);
         }
 
         public static IEnumerable<int> Evens()
         {
-            throw new NotImplementedException();
+            return Filter(All(), n => n % 2 == 0);
         }
     }
 }
